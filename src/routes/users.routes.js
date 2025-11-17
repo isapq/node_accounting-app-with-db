@@ -7,7 +7,7 @@ const {
   getUserById,
   patchUserById,
   deleteUserById,
-} = require('./../controlers/users.controller');
+} = require('../controllers/users.controller');
 // const User = require('../models/User.model');
 const router = express.Router();
 

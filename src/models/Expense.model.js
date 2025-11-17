@@ -15,6 +15,7 @@ const Expense = sequelize.define(
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      field: 'user_id',
       references: {
         model: User,
         key: 'id',

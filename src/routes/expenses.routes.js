@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const express = require('express');
 
@@ -67,6 +67,28 @@ router.post('/', async (req, res) => {
 
 router.post('/expenses', createExpense);
 router.get('/:id', getExpensesById);
+router.patch('/:id', patchExpensesById);
+router.delete('/:id', deleteExpensesById);
+
+module.exports = router; */
+
+'use strict';
+
+const express = require('express');
+
+const {
+  getExpensesById,
+  patchExpensesById,
+  deleteExpensesById,
+  createExpense,
+  getExpenses,
+} = require('../controllers/expenses.controller');
+
+const router = express.Router();
+
+router.get('/', getExpenses);
+router.get('/:id', getExpensesById);
+router.post('/', createExpense);
 router.patch('/:id', patchExpensesById);
 router.delete('/:id', deleteExpensesById);
 
